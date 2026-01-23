@@ -8,6 +8,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<UsuarioRepository>();
+builder.Services.AddScoped<backEndGamesTito.API.Services.EmailService>();
+builder.Services.AddScoped<backEndGamesTito.API.Services.WhatsAppService>();
+builder.Services.AddScoped<backEndGamesTito.API.Services.TelegramService>();
 
 var app = builder.Build();
 

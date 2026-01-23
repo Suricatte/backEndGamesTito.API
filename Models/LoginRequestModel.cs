@@ -6,9 +6,10 @@ namespace backEndGamesTito.Api.Models
 {
     public class LoginRequestModel
     {
-        [Required(ErrorMessage = "O campo email é obrigatório!")]
-        [EmailAddress(ErrorMessage = "O email informado não é valido!")]
-        public string Email { get; set; } = string.Empty;
+        // Mudamos de 'Email' para 'Identifier' e removemos a validação de [EmailAddress]
+        [Required(ErrorMessage = "O campo e-mail ou celular é obrigatório!")]
+        public string Identifier { get; set; } = string.Empty;
+
         [Required(ErrorMessage = "O campo senha é obrigatório!")]
         public string PassWordHash { get; set; } = string.Empty;
     }
