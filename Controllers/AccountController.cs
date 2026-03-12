@@ -129,7 +129,7 @@ namespace backEndGamesTito.API.Controllers
             {
                 try
                 {
-                    string emailBody = $"<h3>Seu código de recuperação GamesTito: <strong>{rawToken}</strong></h3>";
+                    string emailBody = $"<h3>Brilho Eterno de uma Mente sem lembranças: <strong>{rawToken}</strong></h3>";
                     await _emailService.SendEmailAsync(user.Email, "Recuperação de Senha", emailBody);
                     return Ok(new { erro = false, message = "Código enviado ao E-mail." });
                 }
