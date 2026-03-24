@@ -12,7 +12,7 @@ namespace backEndGamesTito.API.Repositories
 {
     public class JogoRepository
     {
-        private readonly string _connectionString;
+        private readonly string _connectionString = string.Empty;
 
         public JogoRepository(IConfiguration configuration)
         {

@@ -18,7 +18,6 @@ namespace backEndGamesTito.API.Repositories
                     ?? throw new ArgumentNullException("String de conexão 'DefaultConnection' não enconrada!");
         }
 
-        // Atualizado para incluir Celular E Telegram no cadastro
         public async Task CreateUserAsync(Usuario user)
         {
             using (var connection = new SqlConnection(_connectionString))

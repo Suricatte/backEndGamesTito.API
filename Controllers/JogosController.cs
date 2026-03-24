@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using System.Collections.Generic;
-// Remova as outras referências de Models que estão sobrando e use apenas a correta:
 using backEndGamesTito.API.Data.Models; 
 
 namespace backEndGamesTito.API.Controllers
@@ -33,8 +32,7 @@ namespace backEndGamesTito.API.Controllers
             }
         }
 
-        // Alterei o nome da rota aqui para evitar qualquer conflito de detecção
-        [HttpGet("FindById/{jogoId:int}")] 
+        [HttpGet("{jogoId:int}")] 
         public async Task<IActionResult> GetById(int jogoId)
         {
             try
